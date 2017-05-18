@@ -74,8 +74,15 @@ class I18nStringValidator extends AbstractValidator
      */
     public function validateKey($key)
     {
-        if (empty($key)) {
+        $length = strlen((string) $key);
+
+        if (!$length) {
             $this->addError('key', 'Key cannot be empty');
+            return false;
+        }
+
+        if ($length > 255) {
+            $this->addError('key', 'Key length cannot exceed 255 chars');
             return false;
         }
 
@@ -98,6 +105,11 @@ class I18nStringValidator extends AbstractValidator
 
         if (substr($namespace, 0, 1) !== '/') {
             $this->addError('namespace', 'The namespace have to start with the character "/".');
+            return false;
+        }
+
+        if (strlen($namespace) > 255) {
+            $this->addError('namespace', 'Namespace length cannot exceed 255 chars');
             return false;
         }
 
