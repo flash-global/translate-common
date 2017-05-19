@@ -71,22 +71,27 @@ class I18nStringValidatorTest extends Unit
     public function testValidateKey()
     {
         $validatorStub = Stub::make(I18nStringValidator::class, [
-            'addError' => Stub::exactly(1)
+            'addError' => Stub::exactly(3)
         ], $this);
 
         $this->assertTrue($validatorStub->validateKey('KEY'));
         $this->assertFalse($validatorStub->validateKey(''));
+        $this->assertFalse($validatorStub->validateKey(false));
+        $this->assertFalse($validatorStub->validateKey('/Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique mauris in orci tincidunt feugiat. Nullam eget orci ac diam blandit hendrerit. Donec et ultricies augue, sed molestie justo. Maecenas elit dui, faucibus et orci eget, ullamcorper gravida'));
     }
 
     public function testValidateNamespace()
     {
         $validatorStub = Stub::make(I18nStringValidator::class, [
-            'addError' => Stub::exactly(2)
+            'addError' => Stub::exactly(4)
         ], $this);
 
         $this->assertTrue($validatorStub->validateNamespace('/My/Namespace'));
+        $this->assertTrue($validatorStub->validateNamespace('/0'));
         $this->assertFalse($validatorStub->validateNamespace(''));
+        $this->assertFalse($validatorStub->validateNamespace(false));
         $this->assertFalse($validatorStub->validateNamespace('My/Namespace'));
+        $this->assertFalse($validatorStub->validateNamespace('/Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique mauris in orci tincidunt feugiat. Nullam eget orci ac diam blandit hendrerit. Donec et ultricies augue, sed molestie justo. Maecenas elit dui, faucibus et orci eget, ullamcorper gravida'));
     }
 
     public function testValidateContent()
