@@ -81,11 +81,6 @@ class I18nStringValidator extends AbstractValidator
             return false;
         }
 
-        if ($length > 255) {
-            $this->addError('key', 'Key length cannot exceed 255 chars');
-            return false;
-        }
-
         return true;
     }
 
