@@ -17,7 +17,7 @@ In addition to traditional `id` and `createdAt` fields, I18nString entity has **
 | id            | `integer`         | No       |               |
 | createdAt     | `datetime`        | No       | Now()              |
 | lang             | `string`          | Yes       |               |
-| key           | `string`          | Yes       |               |
+| key           | `text`          | Yes       |               |
 | namespace     | `string`         | Yes       |               |
 | content       | `string`         | Yes       |               |
  
