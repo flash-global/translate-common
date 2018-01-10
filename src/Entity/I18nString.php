@@ -39,7 +39,7 @@ class I18nString extends AbstractEntity
     /**
      * @var string
      *
-     * @Column(name="`key`", type="string")
+     * @Column(name="`key`", type="text")
      */
     protected $key;
 
