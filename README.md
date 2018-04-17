@@ -1,5 +1,5 @@
 # Service Translate - Common
-[![GitHub license](https://img.shields.io/github/license/flash-global/translate-common.svg)](https://github.com/flash-global/translate-common)![continuousphp](https://img.shields.io/continuousphp/git-hub/flash-global/translate-common.svg)[![GitHub issues](https://img.shields.io/github/issues/flash-global/translate-common.svg)](https://github.com/flash-global/translate-common/issues)
+[![GitHub license](https://img.shields.io/github/license/flash-global/translate-common.svg)](https://github.com/flash-global/translate-common)[![Build Status](https://travis-ci.org/flash-global/translate-common.svg?branch=master)](https://travis-ci.org/flash-global/translate-common)
 
 ## Table of contents
 - [Entities](#entities)
