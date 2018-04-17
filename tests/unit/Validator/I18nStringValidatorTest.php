@@ -30,12 +30,10 @@ class I18nStringValidatorTest extends Unit
     {
         $validator = new I18nStringValidator();
 
-        $this->expectException(Exception::class);
-        $this->expectExceptionMessage('The entity to validate must be an instance of ' . I18nString::class);
+        $this->setExpectedException(Exception::class);
+        //$this->expectExceptionMessage('The entity to validate must be an instance of ' . I18nString::class);
 
-        $validator->validate(new class extends AbstractEntity {
-
-        });
+        $validator->validate(new Stub2);
     }
 
     public function testValidateCreatedAt()
@@ -103,4 +101,8 @@ class I18nStringValidatorTest extends Unit
         $this->assertTrue($validatorStub->validateContent('My Content'));
         $this->assertFalse($validatorStub->validateContent(''));
     }
+}
+
+class Stub2 extends AbstractEntity {
+
 }
