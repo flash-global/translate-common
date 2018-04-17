@@ -1,6 +1,5 @@
 # Service Translate - Common
-
-[![GitHub release](https://img.shields.io/github/release/flash-global/translate-common.svg?style=for-the-badge)](README.md)
+[![GitHub license](https://img.shields.io/github/license/flash-global/translate-common.svg)](https://github.com/flash-global/translate-common)![continuousphp](https://img.shields.io/continuousphp/git-hub/flash-global/translate-common.svg)[![GitHub issues](https://img.shields.io/github/issues/flash-global/translate-common.svg)](https://github.com/flash-global/translate-common/issues)
 
 ## Table of contents
 - [Entities](#entities)
