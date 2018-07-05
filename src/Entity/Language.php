@@ -4,6 +4,13 @@ namespace Fei\Service\Translate\Entity;
 
 use Fei\Entity\AbstractEntity;
 
+/**
+ * Class Language
+ *
+ * @Entity
+ *
+ * @package Fei\Service\Translate\Entity
+ */
 class Language extends AbstractEntity
 {
     /**
