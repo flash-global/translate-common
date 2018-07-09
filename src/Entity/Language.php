@@ -37,6 +37,13 @@ class Language extends AbstractEntity
     protected $shortName;
 
     /**
+     * @var string
+     *
+     * @Column(type="string", nullable=true)
+     */
+    protected $fallback;
+
+    /**
      * @var bool
      *
      * @Column(type="boolean", name="`enabled`")
@@ -94,6 +101,24 @@ class Language extends AbstractEntity
     public function setShortName($shortName)
     {
         $this->shortName = $shortName;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFallback()
+    {
+        return $this->fallback;
+    }
+
+    /**
+     * @param string $fallback
+     * @return Language
+     */
+    public function setFallback($fallback)
+    {
+        $this->fallback = $fallback;
         return $this;
     }
 
