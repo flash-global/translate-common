@@ -14,7 +14,8 @@ class LanguageTest extends Unit
         $fieldValues = [
             'id' => 1,
             'name' => 'French',
-            'shortName' => 'FR',
+            'shortName' => 'FR_fr',
+            'fallback' => 'en_US'
         ];
 
         foreach ($fieldValues as $field => $value) {
