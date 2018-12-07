@@ -32,4 +32,10 @@
   "require-dev": {
     "codeception/codeception": "^2.2"
   }
+  "repositories": [
+    {
+        "type": "git",
+        "url": "git@github.com:flash-global/entities.git"
+    },
+  ]
 }
